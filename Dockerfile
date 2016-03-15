@@ -1,4 +1,4 @@
-FROM node:0.10.33
+FROM node:4.4.0
 MAINTAINER Jan Blaha
 EXPOSE 2945 
 
@@ -13,7 +13,10 @@ WORKDIR /home/jsreport
 
 ADD run.sh /home/jsreport/run.sh
 
-RUN sudo npm install jsreport
+RUN sudo npm install jsreport --production
 RUN sudo node node_modules/jsreport --init
+
+ENV NODE_ENV production
+
 CMD ["bash", "/home/jsreport/run.sh"]
 

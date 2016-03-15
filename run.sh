@@ -17,13 +17,21 @@ if [ -d "/jsreport" ]; then
     cp "/home/jsreport/prod.config.json" "/jsreport/prod.config.json"    
   fi
 
+  if [ ! -f "/jsreport/dev.config.json" ]; then
+      cp "/home/jsreport/dev.config.json" "/jsreport/dev.config.json"
+  fi
+
   # delete default config and link from volume
 	
   rm -f "/home/jsreport/prod.config.json"
   ln -s "/jsreport/prod.config.json" "/home/jsreport/prod.config.json"
 
+  rm -f "/home/jsreport/dev.config.json"
+  ln -s "/jsreport/dev.config.json" "/home/jsreport/dev.config.json"
+
   chown -R jsreport:jsreport /jsreport
 fi
 
 su jsreport
-sudo node "/home/jsreport/server.js" --httpsPort=2945
+
+NODE_ENV=${NODE_ENV:-production} sudo node "/home/jsreport/server.js" --httpsPort=2945
