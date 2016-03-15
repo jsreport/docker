@@ -34,4 +34,4 @@ fi
 
 su jsreport
 
-NODE_ENV=${NODE_ENV:-production} sudo node "/home/jsreport/server.js" --httpsPort=2945
+sudo NODE_ENV=${NODE_ENV:-production} node "/home/jsreport/server.js" --httpsPort=2945
