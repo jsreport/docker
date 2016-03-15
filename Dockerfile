@@ -3,7 +3,7 @@ MAINTAINER Jan Blaha
 EXPOSE 2945 
 
 RUN apt-get update && apt-get install -y sudo
-RUN npm install npm -g
+RUN npm install npm@3.3.3 -g
 RUN adduser --disabled-password --gecos "" jsreport
 RUN echo "jsreport ALL=(root) NOPASSWD: /usr/local/bin/node" >> /etc/sudoers
 RUN echo "jsreport ALL=(root) NOPASSWD: /usr/local/bin/npm" >> /etc/sudoers
