@@ -1,6 +1,6 @@
 FROM node:4.4.0
 MAINTAINER Jan Blaha
-EXPOSE 2945 
+EXPOSE 5488
 
 RUN apt-get update && apt-get install -y sudo
 RUN npm install npm -g
