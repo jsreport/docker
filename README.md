@@ -12,6 +12,6 @@ This is the most basic usage. It will start jsreport server on port 443 directly
 However it is recommended to run jsreport in the following way.
 
 1. create directory where the jsreport persistent data and configuration will resists
-2. `sudo docker run -d -p 443:2945 --restart always -v /jsreport-home:/jsreport jsreport/jsreport`  where the first `/jsreport-home` path is path to directory created in the previous step
+2. `sudo docker run -d -p 80:5488 --restart always -v /jsreport-home:/jsreport jsreport/jsreport`  where the first `/jsreport-home` path is path to directory created in the previous step
 
 This will start jsreport as a daemon and restart it after system reboot as well.  `/jsreport-home` folder will be used to store persistent data and configuration. Changes will take an effect after container restart.
