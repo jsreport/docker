@@ -1,4 +1,4 @@
-FROM node:4.4.0
+FROM node:4.4-wheezy
 MAINTAINER Jan Blaha
 EXPOSE 5488
 
