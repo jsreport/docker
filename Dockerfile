@@ -20,7 +20,6 @@ RUN sudo npm install jsreport-wkhtmltopdf --production --save --save-exact
 RUN sudo npm install jsreport-ejs --production --save --save-exact
 RUN sudo npm install jsreport-jade --production --save --save-exact
 RUN sudo npm install jsreport-freeze --production --save --save-exact
-RUN sudo npm install jsreport-phantom-image --production --save --save-exact
 
 ENV NODE_ENV production
 
