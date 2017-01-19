@@ -1,3 +1,5 @@
+> #**DEPRECATED** - dockerfiles were moved to the [main repository/docker](https://github.com/jsreport/jsreport/tree/master/docker) 
+
 #jsreport/jsreport
 
 [jsreport/jsreport](https://registry.hub.docker.com/u/jsreport/jsreport/)  is a [docker](https://www.docker.com/) based image for easily running [jsreport](http://jsreport.net) reporting server.
